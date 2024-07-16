@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/index-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body > 
+
+
+
+    <div class="centered-content" style="background-color: rgb(34, 116, 194);background-size: auto;">
+        <h1 class="h1" style="color:rgb(0, 204, 153)">Hello,This is <span class="main-font text-cyan">Phishing Detection System using   Machine Learning </span></h1>
+        <h2 style="color: rgb(202, 58, 58);">This is right place to protect yourself from Phishing websites or Url</h2>
+        <form action="{{ url_for('predict') }}" method="post">
+            <input type="text"name="url" placeholder="Enter URL Here" required >
+            <button type="submit" class="btn-blue">Click Here To Check it</button>
+        </form>
+    </div>
+    
+
+
+
+    <script>
+        // Inline CSS for body and particles div
+        document.body.style.margin = '0';
+        document.body.style.padding = '0';
+        document.body.style.overflow = 'hidden';
+        document.body.style.backgroundColor = '#2d2d2d';
+        var particlesDiv = document.createElement('div');
+        particlesDiv.id = 'particles-js';
+        particlesDiv.style.position = 'absolute';
+        particlesDiv.style.width = '100%';
+        particlesDiv.style.height = '100%';
+        document.body.appendChild(particlesDiv);
+    
+        // Load particles.js
+        var script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+        script.onload = function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 50,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": ["#ff0000", "#ffff00", "#008000"]
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        },
+                        "image": {
+                            "src": "img/github.svg",
+                            "width": 100,
+                            "height": 100
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 10,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 10,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": false,
+                        "distance": 200,
+                        "color": "#000000",
+                        "opacity": 0.4,
+                        "width": 2
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "bubble"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 250,
+                            "size": 0,
+                            "duration": 2,
+                            "opacity": 0,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 400,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        };
+        document.head.appendChild(script);
+    </script>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
